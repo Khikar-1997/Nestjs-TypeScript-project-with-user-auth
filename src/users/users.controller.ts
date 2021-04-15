@@ -29,11 +29,6 @@ export class UsersController {
         return this.usersService.findOne(+id);
     }
 
-    @Patch(':id')
-    @HttpCode(201)
-    update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-        return this.usersService.update(+id, updateUserDto);
-    }
 
     @Delete(':id')
     @HttpCode(200)
